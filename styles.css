@@ -1,0 +1,338 @@
+/*
+  Stylesheet for the website of Céline de Jonquières
+  Cette feuille de style privilégie une palette claire avec des touches
+  de violet et de rose afin de créer une ambiance rassurante et premium.
+  Les contrastes ont été testés pour garantir une bonne lisibilité.
+*/
+
+/* Variables de couleur */
+:root {
+  --color-primary: #8b5cf6; /* violet principal */
+  --color-accent: #e879c6; /* rose accent */
+  --color-dark: #2d1b45;   /* texte principal foncé */
+  --color-text: #5f6470;   /* texte secondaire */
+  --color-background: #fcfafd; /* fond général */
+  --color-light: #fff4fa;  /* fonds légèrement rosés */
+}
+
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+header .logo a {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+nav a {
+  margin-left: 1rem;
+  color: var(--color-dark);
+}
+
+nav a.button-primary {
+  margin-left: 2rem;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+nav a.button-primary:hover {
+  background-color: #7c49df;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+section {
+  padding: 3rem 2rem;
+}
+
+section h2 {
+  color: var(--color-dark);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+section.light {
+  background-color: var(--color-light);
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.hero .content {
+  flex: 1 1 50%;
+  min-width: 280px;
+}
+
+.hero .content h1 {
+  font-size: 2rem;
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+.hero .content p {
+  margin-bottom: 0.75rem;
+}
+
+.hero .badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.badge {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.hero .cta {
+  margin-top: 1rem;
+}
+
+.button-primary,
+.button-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.button-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.button-primary:hover,
+.button-primary:focus {
+  background-color: #7c49df;
+  color: #ffffff;
+}
+
+.button-secondary {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  margin-left: 0.5rem;
+}
+
+.button-secondary:hover,
+.button-secondary:focus {
+  background-color: #d363b1;
+  color: #ffffff;
+}
+
+.hero .image img {
+  max-width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Color block used instead of images on some hero sections */
+.color-block {
+  width: 100%;
+  min-height: 280px;
+  background: linear-gradient(
+    135deg,
+    #fdf8ff 0%,
+    #fff5fb 45%,
+    #f6f0ff 100%
+  );
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Cards for authority section */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--color-dark);
+  font-size: 1.1rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Offers */
+.offers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.offer {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.offer h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: var(--color-dark);
+}
+
+.offer p {
+  margin-bottom: 1.25rem;
+}
+
+/* Method steps */
+.method {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.step h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--color-dark);
+}
+
+.step p {
+  margin: 0;
+}
+
+/* Testimonials */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.testimonial {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.testimonial .stars {
+  color: var(--color-accent);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial .quote {
+  font-style: italic;
+  margin: 0;
+  color: var(--color-dark);
+}
+
+.note {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--color-text);
+  font-style: italic;
+}
+
+/* Contact */
+#contact .contact-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.email-box {
+  background-color: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+  color: var(--color-dark);
+}
+
+/* Footer */
+footer {
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav a.button-primary {
+    margin-left: 1rem;
+  }
+}
